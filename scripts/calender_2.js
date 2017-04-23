@@ -26,8 +26,10 @@ function addDays(){
         var date = new Date(today.getFullYear(),todaysMonth,k);
         if(date.getDay() == j){
           cell.innerHTML = date.getDate();
+          
           if(date.getDate() == todaysDate){
-            cell.className = "cal-header";
+            cell.className = "cal-today";
+            cell.id = "cell_num_"+k;
           }
           k++;
         }
